@@ -19,6 +19,12 @@
         and only a little milk foam poured over it. Serve in a latte glass or a
         coffee cup. Flavored syrup can be added.
     </string>
+    <string name="espresso_title">ESPRESSO</string>
+    <string name="espresso_desc">Strong black coffee made by forcing steam through ground coffee beans.</string>
+
+    <string name="mocha_title">MOCHA</string>
+    <string name="mocha_desc">A chocolate-flavoured variant of a caffe latte.</string>
+
 
     <string name="coffee_list">Coffee List</string>
 </resources>
