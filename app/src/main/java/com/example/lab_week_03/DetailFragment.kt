@@ -69,20 +69,17 @@ class DetailFragment : Fragment() {
         }
     }
 
-    // Fungsi publik untuk dipanggil dari luar Fragment
     fun setCoffeeData(id: Int) {
-        // Jika view sudah siap, langsung tampilkan data
         if (::coffeeTitle.isInitialized && ::coffeeDesc.isInitialized) {
             displayCoffeeData(id)
         } else {
-            // Jika view belum siap, simpan ID untuk ditampilkan nanti di onViewCreated
             coffeeIdToDisplay = id
         }
     }
 
     companion object {
         @JvmStatic
-        fun newInstance(param1: String /*, param2: String */) = // Hapus param2 jika tidak digunakan
+        fun newInstance(param1: String /*, param2: String */) =
             DetailFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
