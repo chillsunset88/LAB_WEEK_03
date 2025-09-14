@@ -38,6 +38,9 @@ class DetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val coffeeId = arguments?.getInt(COFFEE_ID, 0) ?: 0
+
+        setCoffeeData(coffeeId)
 
 
         coffeeTitle = view.findViewById(R.id.coffee_title)
@@ -49,7 +52,7 @@ class DetailFragment : Fragment() {
         }
     }
 
-    // Ubah nama fungsi agar lebih jelas, dan buat private jika hanya digunakan di dalam kelas ini
+
     fun displayCoffeeData(id: Int) {
         when (id) {
             R.id.affogato -> {
@@ -64,8 +67,6 @@ class DetailFragment : Fragment() {
                 coffeeTitle.text = getString(R.string.latte_title)
                 coffeeDesc.text  = getString(R.string.latte_desc)
             }
-
-            // Tambahkan else case jika ID tidak dikenali
         }
     }
 
@@ -78,12 +79,11 @@ class DetailFragment : Fragment() {
     }
 
     companion object {
-        @JvmStatic
-        fun newInstance(param1: String /*, param2: String */) =
+        private const val COFFEE_ID = "COFFEE_ID"
+        fun newInstance(coffeeId: Int) =
             DetailFragment().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    // putString(ARG_PARAM2, param2) // Jika tidak digunakan, bisa dihapus
+                    putInt(COFFEE_ID, coffeeId)
                 }
             }
     }

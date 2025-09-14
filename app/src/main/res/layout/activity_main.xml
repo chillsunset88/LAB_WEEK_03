@@ -9,13 +9,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragment_list"
-        android:name="com.example.lab_week_03.ListFragment"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2" />
-
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -23,10 +16,9 @@
         android:background="?android:attr/dividerVertical" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragment_detail"
-        android:name="com.example.lab_week_03.DetailFragment"
+        android:id="@+id/fragment_container"
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_height="match_parent"/>
 
 </LinearLayout>
